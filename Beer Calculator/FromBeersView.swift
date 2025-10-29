@@ -17,7 +17,7 @@ struct FromBeersView: View {
     private var numberFormatter: NumberFormatter {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
-        nf.maximumFractionDigits = 2
+        nf.maximumFractionDigits = 1
         nf.minimumFractionDigits = 0
         return nf
     }
@@ -58,6 +58,7 @@ struct FromBeersView: View {
                             showInfoView = true
                         }, label: {
                             Image(systemName: "mug")
+                                .foregroundStyle(Color(.orangeSecondary))
                         })
                         
                         .padding(.trailing, 30)

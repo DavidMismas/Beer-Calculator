@@ -32,6 +32,10 @@ enum ExerciseType: String, CaseIterable, Identifiable {
         case .swimming: return numberOfBeers * 210 / 450
         }
     }
+    
+    func calculateHours(numberOfBeers: Double) -> Double {
+        return numberOfBeers * 2.6
+    }
    
 }
 

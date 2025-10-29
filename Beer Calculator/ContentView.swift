@@ -20,6 +20,10 @@ struct ContentView: View {
                     FromBeersView()
                 }
                 
+                Tab("Can i drive?", systemImage: "car") {
+                    CanIDriveView()
+                }
+                
             }
         }
         

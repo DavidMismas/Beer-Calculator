@@ -18,7 +18,7 @@ struct ToBeersView: View {
     private var numberFormatter: NumberFormatter {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
-        nf.maximumFractionDigits = 2
+        nf.maximumFractionDigits = 1
         nf.minimumFractionDigits = 0
         return nf
     }
@@ -64,6 +64,7 @@ struct ToBeersView: View {
                             showInfoView = true
                         }, label: {
                             Image(systemName: "mug")
+                                .foregroundStyle(Color(.orangeSecondary))
                         })
                         
                         .padding(.trailing, 30)
@@ -112,10 +113,11 @@ struct ToBeersView: View {
                                 .frame(width: 150, height: 150)
                                 .background(Circle().fill(Color.orangeSecondary))
                                 .foregroundColor(.white)
-                                .lineLimit(2)
+                                .lineLimit(1)
                                 .padding(.top, 20)
                             Text("BEERS")
                                 .font(.system(size: 24, weight: .semibold))
+                                .foregroundStyle(Color(.orangeSecondary))
                             
                         }
                         .padding(.top, 50)
